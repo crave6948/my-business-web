@@ -16,5 +16,47 @@
         </ul>
       </nav>
     </header>
+    
+    <main>
+      <section id="contact-form">
+        <h2>แบบฟอร์มติดต่อ</h2>
+        <article>
+          <form action="/send-contact" method="POST">
+            <div>
+              <label for="name">ชื่อ:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div>
+              <label for="email">อีเมล:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div>
+              <label for="phone">เบอร์โทร:</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div>
+              <label for="subject">เรื่อง:</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+
+            <div>
+              <label for="message">ข้อความ:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="reset">ล้างข้อมูล</button>
+            <button type="submit">ส่งข้อมูล</button>
+          </form>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
