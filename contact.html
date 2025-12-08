@@ -19,15 +19,12 @@
     
     <main>
       <section id="contact-form">
-        <h2>แบบฟอร์มติดต่อ</h2>
-        <article>
+        <fieldset style="width: 500px">
+          <legend>แบบฟอร์มติดต่อ</legend>
           <form action="/send-contact" method="POST">
             <div>
               <label for="name">ชื่อ:</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-
-            <div>
+              <input type="text" id="name" name="name" required style="width: 200px;"/>
               <label for="email">อีเมล:</label>
               <input type="email" id="email" name="email" required />
             </div>
@@ -42,20 +39,21 @@
               <input type="text" id="subject" name="subject" required />
             </div>
 
-            <div>
-              <label for="message">ข้อความ:</label>
+            <fieldset style="width: 500px">
+              <legend>ข้อมูลเพิ่มเติม</legend>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
                 required
+                style="width: 480px; height: 200px;"
               ></textarea>
-            </div>
+            </fieldset>
 
-            <button type="reset">ล้างข้อมูล</button>
+            <button style="margin-top: 20px;" type="reset">ล้างข้อมูล</button>
             <button type="submit">ส่งข้อมูล</button>
           </form>
-        </article>
+        </fieldset>
       </section>
 
       <section id="contact-info">
