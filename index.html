@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Hub</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="images/github-mark.svg">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/github-mark.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="universal.css" />
-</head>
-<body>
-    <header style="background-color: black; color: white;">
-        <div style="display: flex; align-items: center; column-gap: 10px;">
-            <img src="images/github-mark-white.svg" alt="Business Hub Logo" width="48px" />
-            <h1>Business Hub</h1>
-            <a href="index.html"><p style="color:white">หน้าแรก</p></a>
-            <a href="about.html"><p style="color:white">เกี่ยวกับ</p></a>
-            <a href="services.html"><p style="color:white">บริการ</p></a>
-            <a href="contact.html"><p style="color:white">ติดต่อ</p></a>
-        </div>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <img
+          src="images/github-mark-white.svg"
+          alt="Business Hub Logo"
+          width="48px"
+        />
+        <h1>Business Hub</h1>
+        <a href="index.html"><p style="color: white">หน้าแรก</p></a>
+        <a href="about.html"><p style="color: white">เกี่ยวกับ</p></a>
+        <a href="services.html"><p style="color: white">บริการ</p></a>
+        <a href="contact.html"><p style="color: white">ติดต่อ</p></a>
+      </div>
     </header>
     <main>
-        <article style="display: flex; justify-content: center; align-items: center; height: 200px; flex-direction: column;">
-            <h1>Welcome to Business Hub</h1>
-            <div style="display: flex; column-gap: 20px;">
-                <h4>รวมธุรกิจที่คุณต้องการในที่เดียว</h4>
-                <a href="services.html"><h4>ดูธุรกิจ</h4></a>
-            </div>
-        </article>
-        <section id="main-features" style="display: flex; justify-content: space-evenly;">
-            <h2>หาธุรกิจง่าย</h2>
-            <h2>ติดต่อโดยตรง</h2>
-            <h2>น่าเชื่อถือ</h2>
-        </section>
-    </main>
-    <footer style="background-color: white; color: black; margin-top: 50px;">
-        <div style="display: flex; justify-content: space-between;">
-            <section id="contact-services" style="display: flex; flex-direction: column;">
-                <!-- support help and other services -->
-                <p>สำหรับการสนับสนุนและบริการ โปรดไปที่ศูนย์ช่วยเหลือของเราหรือติดต่อทีมสนับสนุนของเรา</p>
-                <!-- contact information -->
-                <p>ติดต่อเราที่ support@businesshub.com หรือโทร 123-456-7890</p>
-            </section>
-            <!-- copyright -->
-            <p style="align-self: flex-end;">© 2025 Business Hub. All rights reserved.</p>
+      <div class="background-container">
+        <img
+          src="images/bg-darker.png"
+          alt="Background Image"
+          class="background-blur"
+        />
+      </div>
+      <section class="hero">
+        <h1>Welcome to Business Hub</h1>
+        <div>
+          <h4>รวมธุรกิจที่คุณต้องการในที่เดียว</h4>
+          <a href="services.html"><h4>ดูธุรกิจ</h4></a>
         </div>
+      </section>
+      <section id="main-features">
+        <span>หาธุรกิจง่าย</span>
+        <span>ติดต่อโดยตรง</span>
+        <span>น่าเชื่อถือ</span>
+      </section>
+    </main>
+    <footer id="footer">
+      <div id="contact-services">
+        <!-- support help and other services -->
+        <p class="ton-top">
+          สำหรับการสนับสนุนและบริการ
+          โปรดไปที่ศูนย์ช่วยเหลือของเราหรือติดต่อทีมสนับสนุนของเรา
+        </p>
+        <!-- contact information -->
+        <p class="ton-left-bottom">
+          ติดต่อเราที่ support@businesshub.com หรือโทร 123-456-7890
+        </p>
+        <!-- copyright -->
+        <p class="ton-right-bottom" style="text-align: right">
+          © 2025 Business Hub. All rights reserved.
+        </p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
