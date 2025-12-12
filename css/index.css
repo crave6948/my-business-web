@@ -1,6 +1,8 @@
 #header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
+  z-index: 10;
   background-color: black;
   color: white;
 }
@@ -9,6 +11,23 @@
   display: flex;
   align-items: center;
   column-gap: 10px;
+  a {
+    text-decoration: none;
+    color: white;
+    .underline-a {
+      display: block;
+      height: 2px;
+      background-color: white;
+      width: 0%;
+      transition: width 0.3s;
+    }
+  }
+  a:hover {
+    cursor: pointer;
+    .underline-a {
+      width: 100%;
+    }
+  }
 }
 
 main {
