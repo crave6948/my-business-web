@@ -21,3 +21,40 @@ h1, h2, h3, h4, h5, h6, p, span, a, div {
   font-style: normal;
   font-variation-settings: "GRAD" 0;
 }
+
+/* Shared site header + nav hover effect */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: black;
+  color: white;
+}
+
+#header div {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+#header div a {
+  text-decoration: none;
+  color: white;
+}
+
+#header div a .underline-a {
+  display: block;
+  height: 2px;
+  background-color: white;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+#header div a:hover {
+  cursor: pointer;
+}
+
+#header div a:hover .underline-a {
+  width: 100%;
+}
