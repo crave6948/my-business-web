@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+/* ==========================
+   RESET & DEFAULTS
+   ========================== */
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 
 * {
   margin: 0;
@@ -6,6 +9,9 @@
   box-sizing: border-box;
 }
 
+/* ==========================
+   TYPOGRAPHY
+   ========================== */
 .google-sans-hero {
   font-family: "Google Sans", sans-serif;
   font-optical-sizing: auto;
@@ -14,7 +20,16 @@
   font-variation-settings: "GRAD" 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a, div {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+div {
   font-family: "Google Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -22,6 +37,9 @@ h1, h2, h3, h4, h5, h6, p, span, a, div {
   font-variation-settings: "GRAD" 0;
 }
 
+/* ==========================
+   COMPONENTS (HEADER, NAV, CARD, etc.)
+   ========================== */
 /* Shared site header + nav hover effect */
 #header {
   position: fixed;
@@ -58,3 +76,11 @@ h1, h2, h3, h4, h5, h6, p, span, a, div {
 #header div a:hover .underline-a {
   width: 100%;
 }
+
+/* ==========================
+   LAYOUT & CONTAINERS
+   ========================== */
+
+/* ==========================
+   RESPONSIVE / MEDIA QUERIES
+   ========================== */

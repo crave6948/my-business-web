@@ -1,3 +1,6 @@
+/* ==========================
+   COMPONENTS (HEADER, NAV, CARD, etc.)
+   ========================== */
 #header {
   position: fixed;
   top: 0;
@@ -27,30 +30,6 @@
     .underline-a {
       width: 100%;
     }
-  }
-}
-
-main {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  .background-blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    /* blur effect */
-    filter: blur(5px);
-  }
-  h1,
-  h4,
-  #main-features span {
-    text-shadow: 0 0 10px white;
   }
 }
 
@@ -129,3 +108,34 @@ main {
     }
   }
 }
+
+/* ==========================
+   LAYOUT & CONTAINERS
+   ========================== */
+main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  .background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* blur effect */
+    filter: blur(5px);
+  }
+  h1,
+  h4,
+  #main-features span {
+    text-shadow: 0 0 10px white;
+  }
+}
+
+/* ==========================
+   RESPONSIVE / MEDIA QUERIES
+   ========================== */
