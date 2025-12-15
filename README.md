@@ -156,7 +156,7 @@ font-family: "Google Sans", sans-serif;
 
 ### Responsive Design
 
-เว็บไซต์ใช้ Mobile-first approach พร้อม breakpoints หลัก:
+เว็บไซต์ใช้ Desktop-first approach พร้อม breakpoints หลัก:
 
 | Breakpoint | Target Devices |
 |------------|----------------|
