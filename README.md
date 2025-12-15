@@ -137,7 +137,7 @@ font-family: "Google Sans", sans-serif;
 | **Block Layout** | Default document flow, sections, articles |
 
 **Grid Examples**:
-- Main features: `repeat(3, 1fr)` → responsive: `1fr`
+- Main features: `1fr 1fr 1fr` → responsive: `1fr`
 - Team grid: `repeat(4, 1fr)` → tablet: `repeat(2, 1fr)` → mobile: `1fr`
 - Contact sections: `1fr 1fr` → mobile: `1fr`
 - Form rows: `1fr 1fr` → mobile: `1fr`
