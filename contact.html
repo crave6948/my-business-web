@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Business Hub</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/github-mark.svg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="universal.css" />
     <link rel="stylesheet" href="css/contact/contact.css" />
@@ -17,18 +23,33 @@
           width="48px"
         />
         <h1>Business Hub</h1>
-        <a href="index.html"><p>หน้าแรก</p><div class="underline-a"></div></a>
-        <a href="about.html"><p>เกี่ยวกับ</p><div class="underline-a"></div></a>
-        <a href="services.html"><p>บริการ</p><div class="underline-a"></div></a>
-        <a href="contact.html"><p>ติดต่อ</p><div class="underline-a"></div></a>
+        <a href="index.html"
+          ><p>หน้าแรก</p>
+          <div class="underline-a"></div
+        ></a>
+        <a href="about.html"
+          ><p>เกี่ยวกับ</p>
+          <div class="underline-a"></div
+        ></a>
+        <a href="services.html"
+          ><p>บริการ</p>
+          <div class="underline-a"></div
+        ></a>
+        <a href="contact.html"
+          ><p>ติดต่อ</p>
+          <div class="underline-a"></div
+        ></a>
       </div>
     </header>
 
     <main>
       <section class="page-header">
         <h1>ติดต่อเรา</h1>
+        <p class="subtitle">
+          มีคำถามหรือต้องการความช่วยเหลือ? ส่งข้อความถึงเราได้เลย
+        </p>
         <nav>
-          <ul>
+          <ul class="header-nav">
             <li><a href="#contact-form">แบบฟอร์มติดต่อ</a></li>
             <li><a href="#contact-info">ข้อมูลติดต่อ</a></li>
             <li><a href="#contact-map">ที่ตั้งของเรา</a></li>
@@ -36,75 +57,111 @@
         </nav>
       </section>
       <section id="contact-form">
-        <fieldset style="width: 500px">
-          <legend>แบบฟอร์มติดต่อ</legend>
-          <form action="/send-contact" method="POST">
-            <div>
-              <label for="name">ชื่อ:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                style="width: 200px"
-              />
-              <label for="email">อีเมล:</label>
-              <input type="email" id="email" name="email" required />
+        <div class="form-card">
+          <h2>แบบฟอร์มติดต่อ</h2>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">ชื่อ</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="เช่น สมชาย"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="email">อีเมล</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
             </div>
-
-            <div>
-              <label for="phone">เบอร์โทร:</label>
-              <input type="tel" id="phone" name="phone" />
+            <div class="form-row">
+              <div class="form-field">
+                <label for="phone">เบอร์โทร</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="081-234-5678"
+                />
+              </div>
+              <div class="form-field">
+                <label for="subject">เรื่อง</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="หัวข้อที่ต้องการติดต่อ"
+                />
+              </div>
             </div>
-
-            <div>
-              <label for="subject">เรื่อง:</label>
-              <input type="text" id="subject" name="subject" required />
-            </div>
-
-            <fieldset style="width: 500px">
-              <legend>ข้อมูลเพิ่มเติม</legend>
+            <div class="form-field">
+              <label for="message">ข้อความ</label>
               <textarea
                 id="message"
                 name="message"
-                rows="5"
-                required
-                style="width: 480px; height: 200px"
+                rows="6"
+                placeholder="พิมพ์ข้อความที่นี่..."
               ></textarea>
-            </fieldset>
-
-            <button style="margin-top: 20px" type="reset">ล้างข้อมูล</button>
-            <button type="submit">ส่งข้อมูล</button>
+            </div>
+            <div class="form-actions">
+              <button type="reset" class="btn-secondary">ล้างข้อมูล</button>
+              <button type="submit" class="btn-primary">
+                <span>ส่งข้อมูล</span>
+              </button>
+            </div>
           </form>
-        </fieldset>
+        </div>
       </section>
 
       <section id="contact-info">
         <h2>ข้อมูลติดต่อ</h2>
-        <article>
-          <p>
-            <strong>ที่อยู่:</strong> 169 ถนน ลงหาดบางแสน ตำบล แสนสุข อำเภอ
-            เมืองชลบุรี จังหวัด ชลบุรี 20130
-          </p>
-          <p><strong>เบอร์โทร:</strong> 02-123-4567</p>
-          <p><strong>อีเมล:</strong> support@businesshub.com</p>
-          <p><strong>เวลาทำการ:</strong> จันทร์ - ศุกร์ 09:00 - 18:00</p>
-        </article>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>สำนักงานหลัก</h3>
+            <ul>
+              <li>
+                <strong>ที่อยู่:</strong> 169 ถนน ลงหาดบางแสน ต.แสนสุข อ.เมือง
+                จ.ชลบุรี 20130
+              </li>
+              <li><strong>เบอร์โทร:</strong> 02-123-4567</li>
+              <li><strong>อีเมล:</strong> support@businesshub.com</li>
+              <li><strong>เวลาทำการ:</strong> จันทร์–ศุกร์ 09:00–18:00</li>
+            </ul>
+          </article>
+          <article class="contact-card">
+            <h3>ฝ่ายสนับสนุน</h3>
+            <ul>
+              <li><strong>อีเมล:</strong> help@businesshub.com</li>
+              <li><strong>โทร:</strong> 123-456-7890</li>
+              <li>
+                <strong>ศูนย์ช่วยเหลือ:</strong>
+                <a href="#">เปิดหน้าศูนย์ช่วยเหลือ</a>
+              </li>
+            </ul>
+          </article>
+        </div>
       </section>
 
       <section id="contact-map">
         <h2>ที่ตั้งของเรา</h2>
-        <article>
+        <article class="map-card">
           <p>คุณสามารถดูที่ตั้งของเราบน Google Maps ได้ที่นี่:</p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5415.890196526075!2d100.92461078607573!3d13.28343402778192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102b4e7c351968b%3A0xf03d84bc0dd30c0!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4Lia4Li54Lij4Lie4Liy!5e0!3m2!1sth!2sth!4v1765115628673!5m2!1sth!2sth"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5415.890196526075!2d100.92461078607573!3d13.28343402778192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102b4e7c351968b%3A0xf03d84bc0dd30c0!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4Lia4Li54Lij4Lie4Liy!5e0!3m2!1sth!2sth!4v1765115628673!5m2!1sth!2sth"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </article>
       </section>
     </main>
