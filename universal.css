@@ -101,22 +101,18 @@ div {
   background-color: var(--gh-dark-bg-tertiary);
 }
 
-#header div {
-  a {
-    .nav-underline {
-      display: block;
-      padding: 0;
-      margin: 0;
-      height: 2px;
-      background-color: var(--gh-accent-blue);
-      width: 5%;
-      transition: all 0.3s ease;
-    }
-  }
+#header div a .nav-underline {
+  display: block;
+  padding: 0;
+  margin: 0;
+  height: 2px;
+  background-color: var(--gh-accent-blue);
+  width: 5%;
+  transition: all 0.3s ease;
+}
 
-  a:hover .nav-underline {
-    width: 100%;
-  }
+#header div a:hover .nav-underline {
+  width: 100%;
 }
 
 #footer {
