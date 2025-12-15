@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Services - Business Hub</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/github-mark.svg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="universal.css" />
     <link rel="stylesheet" href="css/services/services.css" />
@@ -17,17 +23,29 @@
           width="48px"
         />
         <h1>Business Hub</h1>
-        <a href="index.html"><p>หน้าแรก</p><div class="underline-a"></div></a>
-        <a href="about.html"><p>เกี่ยวกับ</p><div class="underline-a"></div></a>
-        <a href="services.html"><p>บริการ</p><div class="underline-a"></div></a>
-        <a href="contact.html"><p>ติดต่อ</p><div class="underline-a"></div></a>
+        <a href="index.html"
+          ><p>หน้าแรก</p>
+          <div class="nav-underline"></div
+        ></a>
+        <a href="about.html"
+          ><p>เกี่ยวกับ</p>
+          <div class="nav-underline"></div
+        ></a>
+        <a href="services.html"
+          ><p>บริการ</p>
+          <div class="nav-underline"></div
+        ></a>
+        <a href="contact.html"
+          ><p>ติดต่อ</p>
+          <div class="nav-underline"></div
+        ></a>
       </div>
     </header>
     <main>
       <section class="page-header">
         <h1>บริการของเรา</h1>
         <nav>
-          <ul>
+          <ul class="header-nav">
             <li><a href="#service-consulting">บริการปรึกษาเทคโนโลยี</a></li>
             <li><a href="#service-development">พัฒนาแอปพลิเคชัน</a></li>
             <li><a href="#service-design">ออกแบบ UX/UI</a></li>
@@ -38,7 +56,7 @@
       </section>
       <section id="service-consulting">
         <h2>บริการปรึกษาเทคโนโลยี</h2>
-        <ul>
+        <ul class="service-list">
           <li>
             <article>
               <p>
@@ -53,7 +71,7 @@
 
       <section id="service-development">
         <h2>พัฒนาแอปพลิเคชัน</h2>
-        <ul>
+        <ul class="service-list">
           <li>
             <article>
               <p>
@@ -68,7 +86,7 @@
 
       <section id="service-design">
         <h2>ออกแบบ UX/UI</h2>
-        <ul>
+        <ul class="service-list">
           <li>
             <article>
               <p>
@@ -83,7 +101,7 @@
 
       <section id="service-support">
         <h2>สนับสนุนและบำรุงรักษา</h2>
-        <ul>
+        <ul class="service-list">
           <li>
             <article>
               <p>
@@ -97,56 +115,64 @@
       <section id="service-comparison">
         <h2>เปรียบเทียบบริการของเรา</h2>
         <article>
-          <table
-            border="1"
-            cellpadding="10"
-            cellspacing="0"
-            style="width: 100%; border-collapse: collapse"
-          >
-            <thead>
-              <tr style="background-color: #f0f0f0">
-                <th>บริการ</th>
-                <th>ระยะเวลา</th>
-                <th>ราคา</th>
-                <th>การสนับสนุน</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>ปรึกษาเทคโนโลยี</td>
-                <td>2-4 สัปดาห์</td>
-                <td>฿50,000+</td>
-                <td>3 เดือน</td>
-              </tr>
-              <tr>
-                <td>พัฒนาแอปพลิเคชัน</td>
-                <td>3-6 เดือน</td>
-                <td>฿150,000+</td>
-                <td>6 เดือน</td>
-              </tr>
-              <tr>
-                <td>ออกแบบ UX/UI</td>
-                <td>4-8 สัปดาห์</td>
-                <td>฿80,000+</td>
-                <td>2 เดือน</td>
-              </tr>
-              <tr>
-                <td>สนับสนุนและบำรุงรักษา</td>
-                <td>ต่อเนื่อง</td>
-                <td>฿20,000-50,000/เดือน</td>
-                <td>24/7</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>บริการ</th>
+                  <th>ระยะเวลา</th>
+                  <th>ราคา</th>
+                  <th>การสนับสนุน</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ปรึกษาเทคโนโลยี</td>
+                  <td>2-4 สัปดาห์</td>
+                  <td>฿50,000+</td>
+                  <td>3 เดือน</td>
+                </tr>
+                <tr>
+                  <td>พัฒนาแอปพลิเคชัน</td>
+                  <td>3-6 เดือน</td>
+                  <td>฿150,000+</td>
+                  <td>6 เดือน</td>
+                </tr>
+                <tr>
+                  <td>ออกแบบ UX/UI</td>
+                  <td>4-8 สัปดาห์</td>
+                  <td>฿80,000+</td>
+                  <td>2 เดือน</td>
+                </tr>
+                <tr>
+                  <td>สนับสนุนและบำรุงรักษา</td>
+                  <td>ต่อเนื่อง</td>
+                  <td>฿20,000-50,000/เดือน</td>
+                  <td>24/7</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </article>
       </section>
     </main>
-    <footer>
-      <p>
-        ติดต่อเราที่ support@businesshub.com
-        เพื่อเรียนรู้เพิ่มเติมเกี่ยวกับบริการของเรา
-      </p>
-      <p><a href="index.html">กลับไปหน้าแรก</a></p>
+    <footer id="footer">
+      <div id="contact-services">
+        <!-- support help and other services -->
+        <p class="footer-note-top">
+          สำหรับการสนับสนุนและบริการ
+          โปรดไปที่ <a href="/contact.html">เปิดหน้าศูนย์ช่วยเหลือ</a>ของเราหรือติดต่อทีมสนับสนุนของเรา
+        </p>
+        <!-- contact information -->
+        <p class="footer-note-left">
+          ติดต่อเราที่ support@businesshub.com หรือโทร 123-456-7890
+        </p>
+        <!-- copyright -->
+        <p class="footer-note-right" style="text-align: right">
+          © 2025 Business Hub. All rights reserved.
+        </p>
+      </div>
     </footer>
+    <a href="#" class="back-to-top">Back to Top</a>
   </body>
 </html>

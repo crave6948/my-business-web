@@ -1,141 +1,133 @@
 /* ==========================
    COMPONENTS (HEADER, NAV, CARD, etc.)
    ========================== */
-#header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: black;
-  color: white;
-}
-
-#header div {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  a {
-    text-decoration: none;
-    color: white;
-    .underline-a {
-      display: block;
-      height: 2px;
-      background-color: white;
-      width: 0%;
-      transition: width 0.3s;
-    }
-  }
-  a:hover {
-    cursor: pointer;
-    .underline-a {
-      width: 100%;
-    }
-  }
-}
 
 .hero {
-  display: grid;
-  place-items: center;
-  div {
-    display: flex;
-    column-gap: 20px;
-    justify-content: center;
-    align-items: center;
-  }
-  h1 {
-    font-size: 8rem;
-    margin-bottom: 4rem;
-  }
-  h4,
-  a h4 {
-    font-size: 1.5rem;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 80px;
+  padding: 60px 20px;
+  text-align: center;
+}
 
-  a {
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    padding: 10px 20px;
-    border-radius: 25px;
-    transition: color 0.3s, background-color 0.3s;
-    border-width: 2px;
-    border-style: solid;
-  }
-  a:hover {
-    background-color: white;
-    color: black;
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-  }
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--gh-dark-text-primary);
+  line-height: 1.2;
+}
+
+.hero div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h4,
+.hero a h4 {
+  font-size: 1.25rem;
+  color: var(--gh-dark-text-secondary);
+  margin: 0;
+}
+
+.hero a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--gh-accent-blue);
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  border: 1px solid var(--gh-accent-blue);
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.hero a:hover {
+  background-color: #79c0ff;
+  border-color: #79c0ff;
+  transform: translate(0, -2px);
+  box-shadow: 0 8px 24px rgba(88, 166, 255, 0.3);
+}
+
+.hero a h4 {
+  color: white;
+  margin: 0;
 }
 
 #main-features {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 50px;
-  span {
-    font-size: 2rem;
-    text-align: center;
-  }
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-#footer {
-  position: sticky;
-  bottom: 0;
-  background-color: white;
-  color: black;
-  div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "ton-top ton-top"
-      "ton-left-bottom ton-right-bottom";
+#main-features span {
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--gh-dark-text-primary);
+  padding: 30px;
+  border: 1px solid var(--gh-dark-border);
+  border-radius: 6px;
+  background-color: var(--gh-dark-bg-secondary);
+  transition: all 0.2s;
+}
 
-    .ton-top {
-      grid-area: ton-top;
-    }
-
-    .ton-left-bottom {
-      grid-area: ton-left-bottom;
-    }
-
-    .ton-right-bottom {
-      grid-area: ton-right-bottom;
-    }
-  }
+#main-features span:hover {
+  background-color: var(--gh-dark-bg-tertiary);
+  border-color: var(--gh-accent-blue);
+  color: var(--gh-accent-blue);
 }
 
 /* ==========================
    LAYOUT & CONTAINERS
    ========================== */
 main {
-  display: grid;
-  place-items: center;
-  height: 100vh;
   position: relative;
-  overflow: hidden;
-  .background-blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    /* blur effect */
-    filter: blur(5px);
-  }
-  h1,
-  h4,
-  #main-features span {
-    text-shadow: 0 0 10px white;
-  }
+  overflow-x: hidden;
 }
 
 /* ==========================
    RESPONSIVE / MEDIA QUERIES
    ========================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h4 {
+    font-size: 1rem;
+  }
+
+  #main-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #header div {
+    column-gap: 10px;
+    padding: 0 10px;
+  }
+
+  #header h1 {
+    font-size: 1.2rem;
+  }
+
+  #header div a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .hero div {
+    flex-direction: column;
+  }
+}
