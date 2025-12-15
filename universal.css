@@ -30,7 +30,7 @@ body {
 /* ==========================
    TYPOGRAPHY
    ========================== */
-.google-sans-hero {
+.hero-title {
   font-family: "Google Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -103,7 +103,7 @@ div {
 
 #header div {
   a {
-    .underline-a {
+    .nav-underline {
       display: block;
       padding: 0;
       margin: 0;
@@ -114,7 +114,7 @@ div {
     }
   }
   
-  a:hover .underline-a {
+  a:hover .nav-underline {
     width: 100%;
   }
 }
@@ -141,13 +141,83 @@ div {
   line-height: 1.6;
 }
 
-#footer div .ton-top {
+#footer div .footer-note-top {
   grid-column: 1 / -1;
 }
 
 /* ==========================
    LAYOUT & CONTAINERS
    ========================== */
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--gh-dark-bg-primary);
+}
+
+.page-header {
+  margin-top: 80px; /* account for fixed header */
+  padding: 40px 20px 24px;
+  border-bottom: 1px solid var(--gh-dark-border);
+  background-color: var(--gh-dark-bg-secondary);
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gh-dark-text-primary);
+  margin-bottom: 16px;
+}
+
+.page-header .subtitle {
+  margin-top: 8px;
+  color: var(--gh-dark-text-secondary);
+}
+
+/* Shared Nav in Page Headers */
+.page-header nav ul.header-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 12px;
+  justify-content: center;
+  padding: 12px 0 0;
+}
+
+.page-header nav ul.header-nav li a {
+  text-decoration: none;
+  color: var(--gh-dark-text-primary);
+  background-color: var(--gh-dark-bg-tertiary);
+  border: 1px solid var(--gh-dark-border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.page-header nav ul.header-nav li a:hover {
+  color: white;
+  background-color: var(--gh-accent-blue);
+  border-color: var(--gh-accent-blue);
+  box-shadow: 0 8px 24px rgba(88, 166, 255, 0.25);
+}
+
+section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--gh-accent-blue);
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
 
 /* ==========================
    RESPONSIVE / MEDIA QUERIES
