@@ -131,12 +131,12 @@ div {
 
 #footer div .footer-note-top {
   grid-column: 1 / -1;
-  a {
-    color: var(--gh-accent-blue);
-    text-decoration: none;
-  }
 }
 
+#footer div .footer-note-top a {
+  color: var(--gh-accent-blue);
+  text-decoration: none;
+}
 /* ==========================
    LAYOUT & CONTAINERS
    ========================== */
