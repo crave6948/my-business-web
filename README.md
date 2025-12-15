@@ -30,7 +30,8 @@
 | **Element Selectors** | `body`, `main`, `section`, `h1`, `p`, `a` | ใช้กับ HTML elements ทั่วไป |
 | **Descendant Selectors** | `#header div a`, `.contact-card ul a`, `.form-field input` | ใช้เลือกองค์ประกอบภายในองค์ประกอบอื่น |
 | **Pseudo-classes** | `:hover`, `:nth-child(even)` | ใช้กับ state หรือตำแหน่งขององค์ประกอบ |
-| **Attribute Selectors** | `section[id]`, `input::placeholder` | ใช้เลือกองค์ประกอบตาม attribute หรือ pseudo-elements |
+| **Attribute Selectors** | `section[id]`, `input[type='text']` | ใช้เลือกองค์ประกอบตาม attribute |
+| **Pseudo-elements** | `::placeholder`, `::before`, `::after` | ใช้จัดรูปแบบส่วนเฉพาะขององค์ประกอบ |
 
 ### CSS Units
 
@@ -157,12 +158,35 @@ font-family: "Google Sans", sans-serif;
 
 เว็บไซต์ใช้ Mobile-first approach พร้อม breakpoints หลัก:
 
-| Breakpoint | Changes |
-|------------|---------|
-| **≤ 600px** (Mobile) | - Single column layouts<br>- Reduced font sizes (hero: `2rem`, h1: `1.6rem`)<br>- Smaller padding: `24px 16px`<br>- Stack form fields vertically<br>- Team grid: 1 column |
-| **≤ 768px** (Tablet) | - Header: smaller spacing and font<br>- Features grid: 1 column<br>- Contact sections: 1 column<br>- Form rows: 1 column<br>- Reduced navigation padding |
-| **≤ 1024px** (Small Desktop) | - Team grid: 2 columns instead of 4<br>- Adjusted spacing for medium screens |
-| **> 1024px** (Desktop) | - Full layout with all grid columns<br>- Maximum content width: `1280px`<br>- Optimal spacing and typography |
+| Breakpoint | Target Devices |
+|------------|----------------|
+| **≤ 600px** | Mobile |
+| **≤ 768px** | Tablet |
+| **≤ 1024px** | Small Desktop |
+| **> 1024px** | Desktop |
+
+**Mobile (≤ 600px)**:
+- Single column layouts
+- Reduced font sizes (hero: `2rem`, h1: `1.6rem`)
+- Smaller padding: `24px 16px`
+- Stack form fields vertically
+- Team grid: 1 column
+
+**Tablet (≤ 768px)**:
+- Header: smaller spacing and font
+- Features grid: 1 column
+- Contact sections: 1 column
+- Form rows: 1 column
+- Reduced navigation padding
+
+**Small Desktop (≤ 1024px)**:
+- Team grid: 2 columns instead of 4
+- Adjusted spacing for medium screens
+
+**Desktop (> 1024px)**:
+- Full layout with all grid columns
+- Maximum content width: `1280px`
+- Optimal spacing and typography
 
 **Key Responsive Techniques**:
 - CSS Grid auto-fitting: `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))`
