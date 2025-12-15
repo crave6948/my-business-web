@@ -3,10 +3,28 @@
    ========================== */
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 
+:root {
+  --gh-dark-bg-primary: #0d1117;
+  --gh-dark-bg-secondary: #161b22;
+  --gh-dark-bg-tertiary: #21262d;
+  --gh-dark-border: #30363d;
+  --gh-dark-text-primary: #c9d1d9;
+  --gh-dark-text-secondary: #8b949e;
+  --gh-accent-blue: #58a6ff;
+  --gh-accent-green: #3fb950;
+  --gh-accent-orange: #d29922;
+  --gh-accent-red: #f85149;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gh-dark-bg-primary);
+  color: var(--gh-dark-text-primary);
 }
 
 /* ==========================
@@ -46,35 +64,59 @@ div {
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: black;
-  color: white;
+  background-color: var(--gh-dark-bg-secondary);
+  color: var(--gh-dark-text-primary);
+  border-bottom: 1px solid var(--gh-dark-border);
+  padding: 16px 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(22, 27, 34, 0.9);
 }
 
 #header div {
   display: flex;
   align-items: center;
-  column-gap: 10px;
+  column-gap: 20px;
+  padding: 0 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-right: auto;
 }
 
 #header div a {
   text-decoration: none;
-  color: white;
-}
-
-#header div a .underline-a {
-  display: block;
-  height: 2px;
-  background-color: white;
-  width: 0%;
-  transition: width 0.3s;
+  color: var(--gh-dark-text-primary);
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s;
 }
 
 #header div a:hover {
-  cursor: pointer;
+  color: var(--gh-accent-blue);
+  background-color: var(--gh-dark-bg-tertiary);
 }
 
-#header div a:hover .underline-a {
-  width: 100%;
+#header div {
+  a {
+    .underline-a {
+      display: block;
+      padding: 0;
+      margin: 0;
+      height: 2px;
+      background-color: var(--gh-accent-blue);
+      width: 5%;
+      transition: all 0.3s ease;
+    }
+  }
+  
+  a:hover .underline-a {
+    width: 100%;
+  }
 }
 
 /* ==========================
