@@ -119,6 +119,32 @@ div {
   }
 }
 
+#footer {
+  background-color: var(--gh-dark-bg-secondary);
+  color: var(--gh-dark-text-primary);
+  border-top: 1px solid var(--gh-dark-border);
+  margin-top: 60px;
+  padding: 40px 20px;
+}
+
+#footer div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#footer div p {
+  font-size: 0.9rem;
+  color: var(--gh-dark-text-secondary);
+  line-height: 1.6;
+}
+
+#footer div .ton-top {
+  grid-column: 1 / -1;
+}
+
 /* ==========================
    LAYOUT & CONTAINERS
    ========================== */
