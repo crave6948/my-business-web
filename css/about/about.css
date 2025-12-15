@@ -9,11 +9,109 @@
 /* ==========================
    LAYOUT & CONTAINERS
    ========================== */
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--gh-dark-bg-primary);
+}
+
+.page-header {
+  margin-top: 80px; /* account for fixed header */
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--gh-dark-border);
+  background-color: var(--gh-dark-bg-secondary);
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gh-dark-text-primary);
+}
+
+section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--gh-accent-blue);
+}
+
+section article p {
+  font-size: 1rem;
+  color: var(--gh-dark-text-secondary);
+  line-height: 1.8;
+}
 
 /* ==========================
    COMPONENTS (HEADER, NAV, CARD, etc.)
    ========================== */
+/* Team grid cards */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.team-grid figure {
+  background-color: var(--gh-dark-bg-secondary);
+  border: 1px solid var(--gh-dark-border);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.team-grid figure:hover {
+  border-color: var(--gh-accent-blue);
+  transform: translate(0, -2px);
+  box-shadow: 0 8px 24px rgba(88, 166, 255, 0.15);
+}
+
+.team-grid figure img {
+  border-radius: 8px;
+  border: 1px solid var(--gh-dark-border);
+  background-color: var(--gh-dark-bg-tertiary);
+}
+
+.team-grid figcaption {
+  color: var(--gh-dark-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.team-grid figcaption strong {
+  color: var(--gh-dark-text-primary);
+  display: block;
+  margin-bottom: 6px;
+}
 
 /* ==========================
    RESPONSIVE / MEDIA QUERIES
    ========================== */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 24px 16px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
