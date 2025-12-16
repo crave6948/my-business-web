@@ -111,10 +111,10 @@ font-family: "Google Sans", sans-serif;
 - Header/Footer dividers: `border-bottom/top: 1px solid var(--gh-dark-border)`
 
 **Border-radius**: 
-- Small: `6px` (buttons, inputs)
-- Medium: `8px` (cards, images)
-- Large: `12px` (special containers)
-- Full round: `50%` or `999px` (pills, badges)
+- Small: `6px`
+- Medium: `8px`
+- Large: `12px`
+- Full round: `50%` or `999px`
 
 ### Positioning & Layout
 
