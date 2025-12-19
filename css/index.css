@@ -1,4 +1,22 @@
 /* ==========================
+   PAGE SPECIFIC STYLES
+   ========================== */
+main {
+  /* ใช้ CSS Gradient เลียนแบบรูปภาพที่ส่งมา */
+  /* หากต้องการใช้รูปภาพจริง ให้บันทึกรูปภาพลงในโฟลเดอร์ images (เช่นชื่อ bg-blue.jpg) แล้วแก้บรรทัดด้านล่าง */
+  /* background-image: url('../images/bg-blue.jpg'); */
+  background: linear-gradient(
+    45deg,
+    #000000 0%,
+    #00102a 40%,
+    #0040a0 80%,
+    #00d4ff 100%
+  );
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* ==========================
    COMPONENTS (HEADER, NAV, CARD, etc.)
    ========================== */
 
